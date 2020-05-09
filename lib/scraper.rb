@@ -34,7 +34,8 @@ class Scraper
         students[:github] = link
       else link.include?(".com")
         students[:blog] = link
-      end}
+      }
+    end
 
     end
 
