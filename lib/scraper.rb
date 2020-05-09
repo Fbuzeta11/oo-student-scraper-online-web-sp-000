@@ -25,7 +25,7 @@ class Scraper
     students = {}
 
     container = page.css(".social-icon-container a").collect{|icon| icon.attribute("href").value}
-    container.each do |link|
+    {container.each do |link|
       if link.include?("twitter")
         students[:twitter] = link
       elsif link.include?("linkedin")
@@ -34,8 +34,8 @@ class Scraper
         students[:github] = link
       else link.include?(".com")
         students[:blog] = link
-      end
-      students < link
+      end}
+
     end
 
 
